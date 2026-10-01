@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <h2>Register</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Renders form fields along with field-level validation errors -->
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}

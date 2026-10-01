@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <h1>Welcome, {{ request.user.first_name|default:request.user.email }}!</h1>
+  <p>You are successfully authenticated.</p>
+  <a href="{% url 'logout' %}">Log Out</a>
+{% endblock %}
